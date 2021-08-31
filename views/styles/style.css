@@ -1,0 +1,55 @@
+html {
+    height: 100%;
+  }
+body {
+    height: 100%;
+}
+.main-container{
+    text-align: center;
+    background: linear-gradient(#feab6b, #e76f3d);
+
+}
+
+.welcome{
+    padding: 60px;
+    padding-bottom: 10px;
+}
+.w1{
+    color: #f3e9e7;
+    font-family: 'ms comic sans';
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.appname{
+    position: relative;
+    bottom: 15px;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Ariaasl Narrow', Arial, sans-serif;
+}
+
+.w2{
+    position: relative;
+    bottom: 24px;
+    color: #f3e9e7;
+    font-family: 'ms comic sans';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.actions{
+    margin-top: 10px;
+}
+
+.actions .btn-primary{
+    background-color: #00a7c7;
+    border-color: #00a7c7;
+}
+
+.actions span{
+    font-size: 14px;
+}
+.btnText{
+    color: #00a7c7;
+    cursor: pointer;
+}
