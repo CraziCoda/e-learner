@@ -39,6 +39,7 @@ body {
 
 .actions{
     margin-top: 10px;
+    text-align: center;
 }
 
 .actions .btn-primary{
@@ -52,4 +53,88 @@ body {
 .btnText{
     color: #00a7c7;
     cursor: pointer;
+}
+
+.disappear{
+    display: none;
+}
+
+.signupforms{
+    padding-top: 30px;
+    text-align: left;
+}
+
+.backbtn{
+    font-size: 22px;
+    color: #f3e9e7;
+}
+
+.info{
+    padding-left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #f3e9e7;
+}
+.form1 {
+    margin-top: 40px;
+}
+
+.form-group, .form{
+    margin-top: 30px;
+}
+
+.form-control{
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid #808080;
+    color: #f3e9e7;
+    font-size: 20px;
+}
+
+.form-control:focus{
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid #a1a1a1;
+    outline: none;
+    box-shadow: none;
+    color: #f3e9e7;
+    font-size: 20px;
+}
+
+.screen2btn{
+    margin-top: 30px;
+}
+
+.btn{
+    border-radius: 10px;
+}
+
+.radio{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(90, 90, 90);
+}
+
+.form-check-input{
+    font-size: 15px;
+    margin-top: 10px;
+
+}
+.form-check-input:focus{
+    box-shadow: none;
+    background-color: #00a7c7;
+    border: none;
+}
+.form-check-input:checked{
+    box-shadow: none;
+    background-color: #00a7c7;
+    border: none;
+}
+
+
+label{
+    margin-right: 10px;
+    color: grey;
+    font-weight: 400;
+    
 }

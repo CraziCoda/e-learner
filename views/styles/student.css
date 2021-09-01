@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+  }
+body {
+    height: 100%;
+
+}
+
+.container-fluid{
+    height: 100%;
+}
+
+.nav-bar{
+    position: fixed;
+    width: 100vw;
+    bottom: 20px;
+}
+
+.active{
+    color: #e76f3d;
+}
+
+.overview{
+    padding-top: 30px;
+    height: 90%;
+    
+}
+
+.overview span{
+    font-weight: 700;
+    font-family: 'ms comic sans';
+    
+}
+.content{
+    height: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.content .row{
+    height: 25%;
+    justify-content: space-evenly;
+
+}
+
+.content .row .col-6{
+    width: 45%;
+    border-radius: 15px;
+}
+
+.quote-row{
+    justify-self: center;
+    border-radius: 15px;
+    width: 98%;
+    align-self: center;
+    background: linear-gradient(135deg, #e76f3d,#feab6b);
+}
+
+.row .english{
+    background-color: #f3e9e7;
+}
+
+.row .science{
+    background-color: rgba(155, 207, 224, 0.5);
+}
+
+.row .mathematics{
+    background-color: rgba(254, 171, 107, 0.5);
+}
+
+.row .social-studies{
+    background-color: rgba(155, 207, 224, 0.3);
+}
+
+.colhead{
+    height: 40%;
+    padding-top: 20px;
+}
+
+.colhead{
+    height: 60%;
+}
+
+.sub{
+    font-size: small;
+    color: grey;
+}
+
+.prog{
+    background-color: white;
+    width: 75%;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'ms comic sans';
+    margin: auto;
+}
+
+.sub-icon{
+    color: grey;
+}
+
+.disappear{
+    display: none;
+}

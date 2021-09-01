@@ -1,18 +1,67 @@
-<section class="container-fluid h-100 main-container" style="background-color: silver;">
+<section class="container-fluid h-100 main-container">
+    <div class="s1">
+        <div class="welcome">
+            <div class="welcomeMessage">
+                <span class="w1">Welcome to</span><br/>
+                <span class="appname">𝓔-𝓛𝓮𝓪𝓻𝓷𝓮𝓻</span><br/>
+                <span class="w2">Ready to learn?</span>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./assests/images/stud.png" alt="Student" height="300px" />
+        </div>
     
-    <div class="welcome">
-        <div class="welcomeMessage">
-            <span class="w1">Welcome to</span><br/>
-            <span class="appname">𝓔-𝓛𝓮𝓪𝓻𝓷𝓮𝓻</span><br/>
-            <span class="w2">Ready to learn?</span>
+
+
+        <div class="actions">
+            <button type="button" class="btn btn-primary w-50 signup">Sign Up</button><br/>
+            <span>Already Having An Account: <span class="btnText">Log in</span></span>
         </div>
     </div>
-    <div class="image">
-        <img src="./assests/images/stud.png" alt="Student" height="300px" />
-    </div>
-    <div class="actions">
-        <button type="button" class="btn btn-primary w-25">Primary</button><br/>
-        <span>Already Having An Account: <span class="btnText">Log in</span></span>
+
+    <div class="s2 disappear">
+        <div class="signupforms">
+            <div class="back">
+                <i class="fa fa-arrow-left backbtn"></i>
+            </div>
+            <div class="info">
+                <span> Create new <br/> account </span>
+            </div>
+
+            <div class="form1">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="firstname" class="form-control" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="lastname" class="form-control" placeholder="Last name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="Enter password">
+                    </div>
+
+                    <div class="radio form-group">
+                        <span>Register As: </span>
+                        <input class="form-check-input" type="radio" name="accounttype" id="account-type1" value="Teacher">
+                        <label class="form-check-label" for="account-type1">Teacher</label>
+
+                        <input class="form-check-input" type="radio" name="accounttype" id="account-type2" value="Student" checked>
+                        <label class="form-check-label" for="account-type2">Student</label>
+                    </div>
+
+                    <div class="actions screen2btn">
+                        <button type="submit" class="btn btn-primary w-50 signup">Sign Up</button><br/>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
+<script src="./script/index.js"></script>
 
