@@ -20,13 +20,13 @@ body {
     color: #e76f3d;
 }
 
-.overview{
+.overview, .lessons{
     padding-top: 30px;
     height: 90%;
     
 }
 
-.overview span{
+.overview span, .lessons span{
     font-weight: 700;
     font-family: 'ms comic sans';
     
@@ -99,6 +99,30 @@ body {
 
 .sub-icon{
     color: grey;
+}
+
+
+.content1{
+    padding-top: 20px;
+}
+
+.lesson{
+    border: 1px solid;
+    height: 60px;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: #f3e9e7;
+    margin-top: 5px;
+}
+
+.small{
+    font-size: 10px;
+}
+
+.topic{
+    font-size: 18px;
+    color: #e76f3d;
+    font-weight: bolder;
 }
 
 .disappear{
