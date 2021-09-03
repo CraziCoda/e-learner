@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const hbs = require("express-handlebars");
 const logger = require("morgan");
+const connection = require("./config/db");
 
 //importing routes
 const routes = require("./routes/route");
