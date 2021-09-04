@@ -23,7 +23,6 @@ router.get('/student', (req, res)=>{
         if(err) return console.log(`Error: ${err}`);
         res.render("./pages/student.hbs", 
           { title: "E-learner", style: "../styles/student.css", lessons: docs});
-          console.log(docs[0].title);
         });
     }
 });
