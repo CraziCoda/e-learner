@@ -12,6 +12,11 @@ const lessonSchema = new mongoose.Schema({
         type: String,
         default: "Title"
     },
+    subject: {
+        type: String,
+        default: ""
+    }
+    ,
     foreword: {
         type: String,
         default: ""
@@ -34,4 +39,5 @@ const topicSchema = new mongoose.Schema({
 });
 
 const Account = mongoose.model('Account', accountSchema);
-module.exports = Account;
+const Lesson = mongoose.model('Lesson', lessonSchema);
+module.exports = {Account, Lesson};
