@@ -40,12 +40,15 @@ body {
     box-shadow: 0 0 8px #aaa;
     margin: auto;
     margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .heading{
     font-size: large;
     font-weight: 600;
     padding-left: 10px;
+    color: #feab6b;
 }
 
 .item{

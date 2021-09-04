@@ -37,5 +37,5 @@ const changeView = (index) =>{
 }
 
 const openLesson = (e) =>{
-    location.href = `/lesson?sub=${e.getAttribute('data-sub')}&less=${e.getAttribute('data-topic')}`;
+    location.href = `/lesson?less=${e.getAttribute('data-lesson-id')}`;
 }

@@ -11,7 +11,7 @@ const container = document.querySelector('.container-fluid');
 for(let i = 0;i < items.length;i++){
     let item = items[i];
     item.addEventListener('click', (e)=>{
-        console.log(e.target.getAttribute('data-item'));
+        // console.log(e.target.getAttribute('data-item'));
         openLesson.style.display = 'block';
         container.style.filter = "blur(8px)"
     });    
