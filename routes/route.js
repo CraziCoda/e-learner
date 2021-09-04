@@ -33,6 +33,7 @@ router.post('/signup', (req, res)=>{
   let name = `${req.body.firstname} ${req.body.lastname}`;
   let email = req.body.email;
   let password = req.body.password;
+  console.log(Account);
 
   // Store in db 
   let account = new Account({
