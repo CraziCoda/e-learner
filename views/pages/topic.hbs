@@ -1,37 +1,30 @@
 <div class="container-fluid">
     <div class="back">
         <i class="fa fa-arrow-left backbtn"></i>
-        <span class="title">Title</span>
+        <span class="title">{{title}}</span>
     </div>
     <div class="foreword">
-        Lorem ipsum dolor sit amet consectetur 
-        adipisicing elit. Voluptatem praesentium 
-        libero ipsam! Dignissimos alias repellat, i
-        psam, vero illum numquam 
-        suscipit recusandae perferendis, sit at delectus m
-        agni laboriosam officiis asperiores temporibus.
+        {{foreword}}
     </div>
     <div class="list">
+        {{#each topic}}
          <div class="list-item">
             <div class="heading">
-                <span>Heading is heading</span>
+                <span>{{title}}</span>
             </div>
             <div class="item">
                     <ol class="item-list">
                         <li data-item="hello">
                             <i class="fa fa-edit" data-item="hello"></i>
-                            <span data-item="hello">Hello World</span>
+                            <span data-item="hello">Sub-Topic</span>
                         </li>
                         <hr/>
-                        <li data-item="hello">
-                            <i class="fa fa-video" data-item="hello"></i>
-                            <span data-item="hello">Hello World</span>
-                        </li>
                     </ol>
 
                     <button type="button" class="btn btn-primary w-20" disabled>Take a test</button>
             </div>
-        </div>
+        </div> 
+        {{/each}}
     </div>
 
 </div>
@@ -41,24 +34,9 @@
             <i class="fa fa-times close"></i>
         </div>
        <div class="content">
-            Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Voluptatem praesentium 
-            libero ipsam! Dignissimos alias repellat, i
-            psam, vero illum numquam 
-            suscipit recusandae perferendis, sit at delectus m
-            agni laboriosam officiis asperiores temporibus.
-            Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Voluptatem praesentium 
-            libero ipsam! Dignissimos alias repellat, i
-            psam, vero illum numquam 
-            suscipit recusandae perferendis, sit at delectus m
-            agni laboriosam officiis asperiores temporibus.
-            Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Voluptatem praesentium 
-            libero ipsam! Dignissimos alias repellat, i
-            psam, vero illum numquam 
-            suscipit recusandae perferendis, sit at delectus m
-            agni laboriosam officiis asperiores temporibus.
+            {{#each topic}}
+                {{explanation}}
+            {{/each}}
        </div>
        <div class="end">
            <button type="button" class="btn btn-primary w-20">Done</button>

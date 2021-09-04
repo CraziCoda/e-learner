@@ -1,7 +1,17 @@
 const express = require("express");
 const {Account, Lesson} = require("../config/model");
+const fs = require('fs');
 
 const router = express.Router();
+
+/* let data;
+try {
+  data = fs.readFileSync(`./routes/life_processes.txt`, 'utf8')
+  console.log(data)
+} catch (err) {
+  console.error(err)
+} */
+
 
 router.get("/", (req, res) => {
   res.render("index.hbs", { title: "E-learner", style: "../styles/style.css"});
@@ -9,8 +19,18 @@ router.get("/", (req, res) => {
 
 
 router.get('/lesson', (req, res)=>{
-  console.log(req.query);
-  res.render("./pages/topic.hbs", { title: "E-learner", style: "../styles/topic.css"});
+
+  Lesson.findOne({_id: req.query.less}, (err, doc)=>{
+    if(err) return console.log(`Error: ${err}`);
+
+    res.render("./pages/topic.hbs", { 
+        title: "E-learner", 
+        style: "../styles/topic.css",
+        foreword: doc.foreword,
+        title: doc.title,
+        topic: doc.topic
+      });
+  });
 });
 
 
@@ -54,17 +74,21 @@ router.post('/signup', (req, res)=>{
 
 router.get('/create', (req, res)=>{
   let title = 'Diversity of Living And Non - Living Things';
-  let subject = 'science';
+  let subject = 'Science';
   let foreword = "In this lesson, We will explore the world of the living and non-living";
-  
-  let lesson = new Lesson({title, subject, foreword});
+  let topic = [
+    {
+      title: "Life Processes",
+      explanation: data
+    }
+  ]  
+  let lesson = new Lesson({title, subject, foreword, topic});
 
   lesson.save((err)=>{
     if(err) return console.log(`Error: ${err}`);
     console.log('Lesson Created');
-  })
-
-  console.log();
+  });
 
 });
+
 module.exports = router;

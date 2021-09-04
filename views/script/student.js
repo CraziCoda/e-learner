@@ -1,5 +1,7 @@
 const navs = document.querySelectorAll('.nav-icon');
 const views = document.querySelectorAll('.views');
+const subs = document.querySelectorAll('.small');
+const lessons = document.querySelectorAll('.lesson')
 
 for(let i = 0;i < navs.length;i++){
     navs[i].addEventListener('click', (e)=>{
@@ -10,6 +12,7 @@ for(let i = 0;i < navs.length;i++){
        changeView(i);
     });
 }
+
 
 const changeView = (index) =>{
     switch (index) {
@@ -29,13 +32,43 @@ const changeView = (index) =>{
             navs[3].classList.add('active');
             views[3].classList.remove('disappear');
             break;
-        case 4:
-            navs[4].classList.add('active');
-            views[4].classList.remove('disappear');
-            break;
     }
 }
 
 const openLesson = (e) =>{
-    location.href = `/lesson?less=${e.getAttribute('data-lesson-id')}`;
+    let id = e.getAttribute('data-lesson-id');
+    id = id.slice(0, id.length/2);
+    location.href = `/lesson?less=${id}`;
 }
+
+const sections = document.querySelectorAll('.col-6');
+
+for(let i = 0;i < sections.length;i++){
+    sections[i].addEventListener('click', (e)=>{
+        let subject = e.target.getAttribute('data-subject')
+        for(let i = 0;i < navs.length;i++){
+            navs[i].classList.remove('active');
+            views[i].classList.add('disappear');
+        }
+
+        navs[0].classList.remove('active');
+        views[0].classList.add('disappear');
+
+        navs[1].classList.add('active');
+        views[1].classList.remove('disappear');
+
+        filter(subject);
+    });
+}
+
+const filter = (subject) => {
+    for(let i = 0;i < subs.length;i++){
+        let a = subs[i].innerHTML.toLowerCase();
+        if(subject.toLowerCase() != a){
+            lessons[i].style.display = "none";
+        }else{
+            lessons[i].style.display = "";
+        }   
+    }
+}
+
