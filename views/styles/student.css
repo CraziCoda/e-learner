@@ -220,7 +220,20 @@ body {
     width: 30px;
     
 }
-
+.view_chat{
+    background-color: #fafaf9;
+    height: 80vh;
+    border:1px solid #e76f3d;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.message{
+    height: 30px;
+    background-color: #feab6b;
+    margin-top: 4px;
+    border-radius: 10px;
+    padding-left: 5px;
+}
 .disappear{
     display: none;
 }

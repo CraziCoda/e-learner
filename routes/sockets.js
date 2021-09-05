@@ -21,7 +21,11 @@ const runSocket = (socket) => {
 
     socket.on('a', (a)=>{
         console.log(a);
-    })
+    });
+
+    socket.on('sendMessage', (message)=>{
+        socket.emit('newMessage', message);
+    });
 }
 
 module.exports = runSocket;
