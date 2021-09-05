@@ -24,7 +24,7 @@ const registered = (user) => {
 
 socket.emit('a', inAyoba);
 if (inAyoba) {
-    socket.emit('a', 'hello');
+    socket.emit('a', Ayoba);
     let user = getMsisdn();
     socket.emit('a', 'hello2');
     contact.value = user;
