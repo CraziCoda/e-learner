@@ -20,7 +20,7 @@ const registered = (user) => {
     socket.emit('login', user);
 }
 
-socket.emit('a', Ayoba.getMsisdn());
+socket.emit('a', Ayoba.getLanguage());
 
 if (inAyoba) {
     let user = Ayoba.getMsisdn();
@@ -31,7 +31,6 @@ if (inAyoba) {
     socket.emit('a', user);
 
 } else {
-    const Ayoba = new AyobaStub();
     let user = Ayoba.getMsisdn();
     contact.value = user;
     registered(user);
