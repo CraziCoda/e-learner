@@ -24,7 +24,7 @@ const runSocket = (socket, io) => {
     });
 
     socket.on('sendMessage', (message)=>{
-        socket.emit('newMessage', message);
+        io.emit('newMessage', message);
     });
 }
 
