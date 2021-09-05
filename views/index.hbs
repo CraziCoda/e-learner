@@ -15,7 +15,7 @@
 
         <div class="actions">
             <button type="button" class="btn btn-primary w-50 signup">Sign Up</button><br/>
-            <span>Already Having An Account: <span class="btnText">Log in</span></span>
+            <span>It seems you don't have an account Sign up </span>
         </div>
     </div>
 
@@ -41,6 +41,7 @@
 
                     <div class="form-group">
                         <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+                        <input type="text" name="contact" id="contact" class="form-control" placeholder="Last name" style="display: none;" readonly>
                     </div>
                     <div class="form-group">
                         <input type="password" name="password" class="form-control" placeholder="Enter password" required>
@@ -48,7 +49,7 @@
 
                     <div class="radio form-group">
                         <span>Register As: </span>
-                        <input class="form-check-input" type="radio" name="accounttype" id="account-type1" value="Teacher">
+                        <input class="form-check-input" type="radio" name="accounttype" id="account-type1" value="Teacher" disabled>
                         <label class="form-check-label" for="account-type1">Teacher</label>
 
                         <input class="form-check-input" type="radio" name="accounttype" id="account-type2" value="Student" checked>

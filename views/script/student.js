@@ -37,7 +37,6 @@ const changeView = (index) =>{
 
 const openLesson = (e) =>{
     let id = e.getAttribute('data-lesson-id');
-    id = id.slice(0, id.length/2);
     location.href = `/lesson?less=${id}`;
 }
 
@@ -57,11 +56,12 @@ for(let i = 0;i < sections.length;i++){
         navs[1].classList.add('active');
         views[1].classList.remove('disappear');
 
-        filter(subject);
+        //filter(subject);
+        socket.emit('findLessons', subject);
     });
 }
 
-const filter = (subject) => {
+/* const filter = (subject) => {
     for(let i = 0;i < subs.length;i++){
         let a = subs[i].innerHTML.toLowerCase();
         if(subject.toLowerCase() != a){
@@ -70,5 +70,7 @@ const filter = (subject) => {
             lessons[i].style.display = "";
         }   
     }
-}
+} */
+
+
 
