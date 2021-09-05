@@ -56,21 +56,11 @@ for(let i = 0;i < sections.length;i++){
         navs[1].classList.add('active');
         views[1].classList.remove('disappear');
 
-        //filter(subject);
         socket.emit('findLessons', subject);
     });
 }
 
-/* const filter = (subject) => {
-    for(let i = 0;i < subs.length;i++){
-        let a = subs[i].innerHTML.toLowerCase();
-        if(subject.toLowerCase() != a){
-            lessons[i].style.display = "none";
-        }else{
-            lessons[i].style.display = "";
-        }   
-    }
-} */
+
 
 
 
