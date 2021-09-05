@@ -4,13 +4,13 @@ const fs = require('fs');
 
 const router = express.Router();
 
-/* let data;
+let data;
 try {
   data = fs.readFileSync(`./routes/life_processes.txt`, 'utf8')
   console.log(data)
 } catch (err) {
   console.error(err)
-} */
+} 
 
 
 router.get("/", (req, res) => {
