@@ -17,22 +17,21 @@ back.addEventListener('click', () => {
 });
 
 const registered = (user) => {
-
     socket.emit('login', user);
 
-    //returns acccount id if registered
 }
 
 if (inAyoba) {
     let user = getMsisdn();
     contact.value = user;
     registered(user);
+    console.log(inAyoba, user);
 
 } else {
     const Ayoba = new AyobaStub();
     let user = Ayoba.getMsisdn();
     contact.value = user;
-
+    console.log(inAyoba, user);
     registered(user);
 }
 
