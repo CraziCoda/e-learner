@@ -21,7 +21,7 @@ const registered = (user) => {
 
 }
 
-console.log(inAyoba);
+socket.emit('a', inAyoba);
 
 if (inAyoba) {
     let user = getMsisdn();

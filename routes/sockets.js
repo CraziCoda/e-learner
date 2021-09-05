@@ -18,6 +18,10 @@ const runSocket = (socket) => {
             socket.emit('Lessons', { sub, lessons});
         })
     });
+
+    socket.on('a', (a)=>{
+        console.log(a);
+    })
 }
 
 module.exports = runSocket;
