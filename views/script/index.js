@@ -21,20 +21,21 @@ const registered = (user) => {
 
 }
 
-socket.emit('a', inAyoba);
+
 
 if (inAyoba) {
     let user = getMsisdn();
     contact.value = user;
     registered(user);
     console.log(inAyoba, user);
+    socket.emit('a', user);
 
 } else {
     const Ayoba = new AyobaStub();
     let user = Ayoba.getMsisdn();
     contact.value = user;
-    console.log(inAyoba, user);
     registered(user);
+    //socket.emit('a', user);
 }
 
 //Socket function
