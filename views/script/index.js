@@ -20,10 +20,10 @@ const registered = (user) => {
     socket.emit('login', user);
 }
 
-socket.emit('a', Ayoba)
-
+socket.emit('a', Ayoba.getMsisdn());
 
 if (inAyoba) {
+    let user = Ayoba.getMsisdn();
     socket.emit('a', 'hello2');
     contact.value = user;
     registered(user);
