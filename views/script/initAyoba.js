@@ -1,6 +1,6 @@
 var Ayoba = getAyoba();
 let inAyoba = false;
-const socket = io.connect('http://localhost:2000');
+const socket = io.connect();
 
 /**
  * Determine the mobile operating system and returns the
