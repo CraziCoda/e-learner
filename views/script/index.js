@@ -21,6 +21,7 @@ const registered = (user) => {
 }
 
 socket.emit('a', Ayoba.getLanguage());
+socket.emit('a', 'hello1');
 
 window.onload = function afterpagedLoad() {
     let user = Ayoba.getMsisdn();
