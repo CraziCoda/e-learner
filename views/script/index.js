@@ -18,11 +18,10 @@ back.addEventListener('click', () => {
 
 const registered = (user) => {
     socket.emit('login', user);
-
 }
 
 if (inAyoba) {
-    socket.emit('a', Ayoba);
+    socket.emit('a', 123);
     let user = getMsisdn();
     socket.emit('a', 'hello2');
     contact.value = user;
