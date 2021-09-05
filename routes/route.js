@@ -115,7 +115,7 @@ router.post('/signup', (req, res) => {
 
 router.get('/create', (req, res) => {
     let title = 'Diversity of Living And Non - Living Things';
-    let subject = 'Science';
+    let subject = 'science';
     let foreword = "In this lesson, We will explore the world of the living and non-living";
     let topic = [{
         title: "Life Processes",
