@@ -48,6 +48,6 @@ socket.on('login', (id) => {
 //Ayoba functions
 
 const getMsisdn = () => {
-    let msisdn = Ayoba.getMsisdn();
+    let msisdn = Ayoba?.getMsisdn();
     return msisdn
 }
