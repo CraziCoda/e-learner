@@ -40,6 +40,12 @@ body {
     font-family: 'ms comic sans';
     
 }
+
+.quote{
+    font-weight: bolder;
+    font-size: 20px;
+    color: #fafaf9;
+}
 .content{
     height: 100%;
     padding-top: 30px;
