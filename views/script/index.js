@@ -20,15 +20,8 @@ const registered = (user) => {
     socket.emit('login', user);
 }
 
-socket.emit('a', 'ayh we')
+socket.emit('a', Ayoba)
 
-if (Object.getOwnPropertyNames(Ayoba).includes("getMsisdn")) {
-    console.log("Calling getMsisdn()...");
-    console.log("MSISDN: " + getMsisdn());
-    socket.emit('a', `"MSISDN: " + ${getMsisdn()}`);
-}else{
-    socket.emit('a', 'Nope')
-}
 
 if (inAyoba) {
     socket.emit('a', 'hello2');
