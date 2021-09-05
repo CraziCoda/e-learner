@@ -33,12 +33,19 @@ app.use(cors());
 
 //sockets
 
+let users = 0;
+
 io.on('connection', function(socket) {
   //console.log('Client connected...');
-
+  users++;
   runSocket(socket, io);
+  socket.on('disconnect', ()=>{
+    users--;
+  });
 
 });
+
+
 
 
 //adding middlewares
