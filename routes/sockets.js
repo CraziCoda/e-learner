@@ -1,6 +1,6 @@
 const { Account, Lesson } = require("../config/model");
 
-const runSocket = (socket) => {
+const runSocket = (socket, io) => {
     socket.on('login', (user) => {
         Account.findOne({ contact: user }, (err, user) => {
             socket.emit('login', user?._id);
