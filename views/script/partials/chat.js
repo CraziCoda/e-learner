@@ -9,6 +9,7 @@ chat_btn.addEventListener('click', ()=>{
 });
 
 socket.on('newMessage', (message)=>{
+    console.log(message);
     view.innerHTML += (`<div class="message"><span>${message}</span></div>`);
 })
 

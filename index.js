@@ -33,10 +33,10 @@ app.use(cors());
 
 //sockets
 
-io.on('connection', function(socket) {
+io.on('connection', function(socket, io) {
   //console.log('Client connected...');
 
-  runSocket(socket);
+  runSocket(socket, io);
 
 });
 
