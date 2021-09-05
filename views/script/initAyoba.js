@@ -26,9 +26,6 @@ function getAyoba() {
     return "unknown";
 }
 
-if (Ayoba !== null) {
-    inAyoba = true;
+if (Ayoba === null) {
     Ayoba = new AyobaStub;
-} else {
-    inAyoba = false;
 }

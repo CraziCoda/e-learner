@@ -22,20 +22,12 @@ const registered = (user) => {
 
 socket.emit('a', Ayoba.getLanguage());
 
-if (inAyoba) {
-    let user = Ayoba.getMsisdn();
-    socket.emit('a', 'hello2');
-    contact.value = user;
-    registered(user);
-    console.log(inAyoba, user);
-    socket.emit('a', user);
+let user = Ayoba.getMsisdn();
+socket.emit('a', 'hello2');
+contact.value = user;
+registered(user);
+socket.emit('a', user);
 
-} else {
-    let user = Ayoba.getMsisdn();
-    contact.value = user;
-    registered(user);
-    //socket.emit('a', user);
-}
 
 //Socket function
 socket.on('login', (id) => {
