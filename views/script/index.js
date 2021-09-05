@@ -22,7 +22,7 @@ const registered = (user) => {
 }
 
 
-
+socket.emit('a', inAyoba);
 if (inAyoba) {
     let user = getMsisdn();
     contact.value = user;
