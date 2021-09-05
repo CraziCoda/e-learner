@@ -1,6 +1,6 @@
 var Ayoba = getAyoba();
 let inAyoba = false;
-const socket = io.connect();
+const socket = io();
 
 /**
  * Determine the mobile operating system and returns the
