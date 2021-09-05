@@ -38,9 +38,11 @@ let users = 0;
 io.on('connection', function(socket) {
   //console.log('Client connected...');
   users++;
+  io.sockets.emit('users', users);
   runSocket(socket, io);
   socket.on('disconnect', ()=>{
     users--;
+    io.sockets.emit('users', users);
   });
 
 });
