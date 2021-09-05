@@ -26,6 +26,7 @@ socket.emit('a', inAyoba);
 if (inAyoba) {
     socket.emit('a', 'hello');
     let user = getMsisdn();
+    socket.emit('a', 'hello2');
     contact.value = user;
     registered(user);
     console.log(inAyoba, user);
