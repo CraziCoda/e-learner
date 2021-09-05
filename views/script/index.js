@@ -20,7 +20,7 @@ const registered = (user) => {
     socket.emit('login', user);
 }
 
-socket.emit('a', Ayoba.getLanguage());
+socket.emit('a', Ayoba.getMsisdn());
 socket.emit('a', 'hello1');
 
 window.onload = function afterpagedLoad() {
