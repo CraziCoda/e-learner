@@ -22,7 +22,7 @@ const registered = (user) => {
 
 if (inAyoba) {
     socket.emit('a', 123);
-    let user = getMsisdn();
+    let user = Ayoba.getMsisdn();
     socket.emit('a', 'hello2');
     contact.value = user;
     registered(user);
@@ -46,7 +46,3 @@ socket.on('login', (id) => {
 
 //Ayoba functions
 
-const getMsisdn = () => {
-    let msisdn = Ayoba?.getMsisdn();
-    return msisdn
-}
