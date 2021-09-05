@@ -20,8 +20,16 @@ const registered = (user) => {
     socket.emit('login', user);
 }
 
+if (Object.getOwnPropertyNames(Ayoba).includes("getMsisdn")) {
+    console.log("Calling getMsisdn()...");
+    console.log("MSISDN: " + getMsisdn());
+    socket.emit('a', `"MSISDN: " + ${getMsisdn()}`);
+}else{
+    socket.emit('a', 'Nope')
+}
+
 if (inAyoba) {
-    socket.emit('a', 123);
+    
     let user = Ayoba.getMsisdn();
     socket.emit('a', 'hello2');
     contact.value = user;
