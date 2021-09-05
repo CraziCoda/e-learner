@@ -2,8 +2,10 @@ const path = require("path");
 const express = require("express");
 const hbs = require("express-handlebars");
 const logger = require("morgan");
+var cors = require('cors')
 const connection = require("./config/db");
 const runSocket = require('./routes/sockets');
+
 
 //importing routes
 const routes = require("./routes/route");
@@ -27,7 +29,7 @@ app.engine(
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 app.use(express.static("views"));
-
+app.use(cors());
 
 //sockets
 
