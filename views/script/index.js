@@ -22,13 +22,14 @@ const registered = (user) => {
 
 socket.emit('a', Ayoba.getLanguage());
 
-let user = Ayoba.getMsisdn();
-socket.emit('a', 'hello2');
-contact.value = user;
-registered(user);
-socket.emit('a', user);
+window.onload = function afterpagedLoad() {
+    let user = Ayoba.getMsisdn();
+    socket.emit('a', 'hello2');
+    contact.value = user;
+    registered(user);
+    socket.emit('a', user);
 
-
+}
 //Socket function
 socket.on('login', (id) => {
     if (id != null) return location.href = `/student?id=${id}`;
