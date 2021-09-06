@@ -23,7 +23,7 @@ router.get('/download', (req,res)=>{
     file = file.split('_').join(' ');
     console.log(file, ext);
 
-    res.download(`./assets/${file}.${ext}`);
+    res.sendFile(`./assets/${file}.${ext}`, {root: '.'});
 });
 
 
