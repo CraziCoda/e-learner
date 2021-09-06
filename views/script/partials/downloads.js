@@ -15,6 +15,7 @@ function download(file){
     file = file.replaceAll(" ", "_");
     let ext = file.substring(file.length - 3);
     file = file.substring(0, file.length - 4);
+    alert('Download is not currently available')
     
     location.href = `download?file=${file}&ext=${ext}`;
 }
