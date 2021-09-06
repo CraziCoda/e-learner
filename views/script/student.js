@@ -5,12 +5,15 @@ const lessons = document.querySelectorAll('.lesson')
 
 for(let i = 0;i < navs.length;i++){
     navs[i].addEventListener('click', (e)=>{
+        if(i == 3) socket.emit('viewFiles');
         for(let i = 0;i < navs.length;i++){
             navs[i].classList.remove('active');
             views[i].classList.add('disappear');
         }
        changeView(i);
     });
+
+    
 }
 
 

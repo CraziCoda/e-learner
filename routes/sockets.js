@@ -1,4 +1,7 @@
 const { Account, Lesson } = require("../config/model");
+const fs = require('fs');
+const dir = './assets';
+
 
 const runSocket = (socket, io) => {
     socket.on('login', (user) => {
@@ -26,6 +29,12 @@ const runSocket = (socket, io) => {
     socket.on('sendMessage', (message)=>{
         io.sockets.emit('newMessage', message);
     });
+
+    socket.on('viewFiles', ()=> {
+        fs.readdir(dir, (err, files) => {
+            socket.emit('files', files);
+          });
+    })
 }
 
 module.exports = runSocket;

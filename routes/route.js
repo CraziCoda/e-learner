@@ -7,7 +7,7 @@ const router = express.Router();
 let data;
 try {
   data = fs.readFileSync(`./routes/life_processes.txt`, 'utf8')
-  console.log(data)
+  //console.log(data)
 } catch (err) {
   console.error(err)
 } 
@@ -15,6 +15,15 @@ try {
 
 router.get("/", (req, res) => {
     res.render("index.hbs", { title: "E-learner", style: "../styles/style.css" });
+});
+
+router.get('/download', (req,res)=>{
+    let file = req.query.file;
+    let ext = req.query.ext;
+    file = file.split('_').join(' ');
+    console.log(file, ext);
+
+    res.sendFile(`./assets/${file}.${ext}`, {root: '.'});
 });
 
 
@@ -125,7 +134,7 @@ router.get('/create', (req, res) => {
 
     lesson.save((err) => {
         if (err) return console.log(`Error: ${err}`);
-        console.log('Lesson Created');
+        //console.log('Lesson Created');
     });
 
 });
